@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AdivinhaNumero</string>
+    <string name="advivinhar">Advivinhar</string>
+    <string name="numero">Número</string>
+    <string name="numero_de_tentativas">Numero de Tentativas: 0</string>
+    <string name="numero_pensar">Qual é o numero em que estou a pensar? (1-10)</string>
+</resources>
