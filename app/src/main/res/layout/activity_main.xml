@@ -16,7 +16,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:text="@string/numero_pensar" />
+        android:text="@string/numero_pensar"
+        android:textSize="18sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -29,7 +30,7 @@
         android:layout_marginBottom="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditTextNumero"
+            android:id="@+id/editTextNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/numero"
@@ -38,13 +39,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonAdivinhar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="200dp"
-        android:text="@string/advivinhar" />
+        android:layout_marginBottom="70dp"
+        android:text="@string/advivinhar"
+        app:backgroundTint="#2196F3" />
 
     <TextView
         android:id="@+id/textViewMaiorMenor"
@@ -52,13 +54,23 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center"
+        android:textSize="24sp"
         tools:text="maior ou menor" />
 
     <TextView
         android:id="@+id/textViewNTentativas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="@string/numero_de_tentativas" />
+        android:textSize="18sp"
+        tools:text="@string/numero_de_tentativas" />
+
+    <TextView
+        android:id="@+id/textViewNJogos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="@string/jogos_1" />
 
 </LinearLayout>
