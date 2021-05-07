@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,12 +30,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun atualizaEcra() {
-        findViewById<TextView>(R.id.textViewNTentativas).text = "Tentativas: " + tentativas
-        findViewById<TextView>(R.id.textViewNJogos).text = "Jogo: " + jogo
+        findViewById<TextView>(R.id.textViewNTentativas).text = getString(R.string.tentativas) + tentativas
+        findViewById<TextView>(R.id.textViewNJogos).text = getString(R.string.jogo) + jogo
     }
 
 
     fun adivinha(view: View) {
+        val editTextNumero = findViewById<EditText>(R.id.editTextNumero)
+        val numero = editTextNumero.text.toString().toIntOrNull()
+        when(numero){
+            in 1..10 -> verificaAcertou()
+            null->editTextNumero.error = getString(R.string.numero_invalido)
+            else->editTextNumero.error = getString(R.string.numero_entre_1_e_10)
+        }
         tentativas++
+        atualizaEcra()
+    }
+
+    private fun verificaAcertou() {
+
     }
 }

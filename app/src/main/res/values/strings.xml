@@ -5,4 +5,8 @@
     <string name="numero_de_tentativas">Numero de Tentativas: 0</string>
     <string name="numero_pensar">Qual é o numero em que estou a pensar? (1-10)</string>
     <string name="jogos_1">Jogos: 1</string>
+    <string name="tentativas">\"Tentativas: \"</string>
+    <string name="jogo">\"Jogo: \"</string>
+    <string name="numero_invalido">Introduza um número (entre 1 e 10)</string>
+    <string name="numero_entre_1_e_10">O número deve estar entre 1 e 10</string>
 </resources>
