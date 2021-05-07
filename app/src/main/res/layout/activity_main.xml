@@ -43,28 +43,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="70dp"
-        android:text="@string/advivinhar"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="50dp"
         android:onClick="adivinha"
+        android:text="@string/advivinhar"
         app:backgroundTint="#2196F3" />
 
     <TextView
         android:id="@+id/textViewMaiorMenor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:textSize="24sp"
+        android:textSize="14sp"
         tools:text="maior ou menor" />
 
     <TextView
         android:id="@+id/textViewNTentativas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:textSize="18sp"
+        android:textSize="14sp"
         tools:text="@string/numero_de_tentativas" />
 
     <TextView
@@ -72,6 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="14sp"
         tools:text="@string/jogos_1" />
 
 </LinearLayout>

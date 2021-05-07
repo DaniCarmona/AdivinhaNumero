@@ -3,6 +3,8 @@ package pt.ipg.adivinhanumero
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +29,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun atualizaEcra() {
-
+        findViewById<TextView>(R.id.textViewNTentativas).text = "Tentativas: " + tentativas
+        findViewById<TextView>(R.id.textViewNJogos).text = "Jogo: " + jogo
     }
 
 
