@@ -25,14 +25,17 @@ class MainActivity : AppCompatActivity() {
         numeroAdivinhar = random.nextInt(10) + 1
         tentativas = 0
         jogo++
-        atualizaEcra()
+        atualizaJogo()
+        atualizaTentativas()
     }
 
-    private fun atualizaEcra() {
-        findViewById<TextView>(R.id.textViewNTentativas).text = getString(R.string.tentativas) + " " + tentativas
+    private fun atualizaJogo() {
         findViewById<TextView>(R.id.textViewNJogos).text = getString(R.string.jogo) + " " + jogo
     }
 
+    private fun atualizaTentativas() {
+        findViewById<TextView>(R.id.textViewNTentativas).text = getString(R.string.tentativas) + " " + tentativas
+    }
 
     fun adivinha(view: View) {
         val editTextNumero = findViewById<EditText>(R.id.editTextNumero)
@@ -42,18 +45,20 @@ class MainActivity : AppCompatActivity() {
             null -> editTextNumero.error = getString(R.string.numero_invalido)
             else -> editTextNumero.error = getString(R.string.numero_entre_1_e_10)
         }
-        atualizaEcra()
     }
 
     private fun verificaAcertou(numero: Int?) {
         val textViewMaiorMenor = findViewById<TextView>(R.id.textViewMaiorMenor)
         if(numero == numeroAdivinhar){
            textViewMaiorMenor.text=getString(R.string.acertou)
-
         }else if(numeroAdivinhar>numero!!){
             textViewMaiorMenor.text=getString(R.string.maior)
         }else{
             textViewMaiorMenor.text=getString(R.string.menor)
         }
+        tentativas++;
+        atualizaTentativas()
     }
+
+
 }
