@@ -29,9 +29,11 @@
         android:layout_marginBottom="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditTextNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/numero" />
+            android:hint="@string/numero"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -45,7 +47,7 @@
         android:text="@string/advivinhar" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewMaiorMenor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -53,7 +55,7 @@
         tools:text="maior ou menor" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewNTentativas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
