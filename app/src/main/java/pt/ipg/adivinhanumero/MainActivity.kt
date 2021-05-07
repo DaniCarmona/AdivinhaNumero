@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         val textViewMaiorMenor = findViewById<TextView>(R.id.textViewMaiorMenor)
         if(numero == numeroAdivinhar){
            textViewMaiorMenor.text=getString(R.string.acertou)
+           perguntaSeQuerJogarNovamente()
         }else if(numeroAdivinhar>numero!!){
             textViewMaiorMenor.text=getString(R.string.maior)
         }else{
@@ -58,6 +59,10 @@ class MainActivity : AppCompatActivity() {
         }
         tentativas++;
         atualizaTentativas()
+    }
+
+    private fun perguntaSeQuerJogarNovamente() {
+
     }
 
 
