@@ -19,8 +19,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if(savedInstanceState==null ) {
+            novoJogo()
+        }else{
+            numeroAdivinhar = savedInstanceState.getInt(NUMERO_ADIVINHAR)
+            jogo = savedInstanceState.getInt(JOGO)
+            tentativas = savedInstanceState.getInt(TENTATIVAS)
 
-        novoJogo()
+            atualizaJogo()
+            atualizaTentativas()
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(NUMERO_ADIVINHAR, numeroAdivinhar)
+        outState.putInt(JOGO,jogo)
+        outState.putInt(TENTATIVAS,tentativas)
+
     }
 
     private fun novoJogo() {
@@ -80,6 +96,10 @@ class MainActivity : AppCompatActivity() {
         )
         alertDialogBuilder.show()
     }
-
+    companion object{
+        const val NUMERO_ADIVINHAR = "NUMERO_ADIVINHAR"
+        const val JOGO = "JOGO"
+        const val TENTATIVAS = "TENTATIVAS"
+    }
 
 }
