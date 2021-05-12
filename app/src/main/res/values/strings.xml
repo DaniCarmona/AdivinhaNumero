@@ -12,4 +12,5 @@
     <string name="acertou">Parabéns, Acertou!!!</string>
     <string name="maior">O numero que estou a pensar é maior</string>
     <string name="menor">O numero que estou a pensar é menor</string>
+    <string name="novo_jogo">Quer jogar novamente?</string>
 </resources>

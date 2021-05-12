@@ -1,10 +1,12 @@
 package pt.ipg.adivinhanumero
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         jogo++
         atualizaJogo()
         atualizaTentativas()
+        findViewById<TextView>(R.id.textViewMaiorMenor).text = ""
     }
 
     private fun atualizaJogo() {
@@ -62,7 +65,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun perguntaSeQuerJogarNovamente() {
+        val alertDialogBuilder = AlertDialog.Builder(this)
 
+        alertDialogBuilder.setTitle(R.string.acertou)
+        alertDialogBuilder.setMessage(R.string.novo_jogo)
+        alertDialogBuilder.setPositiveButton(
+                android.R.string.ok,
+                DialogInterface.OnClickListener { dialog, which -> novoJogo() }
+        )
+
+        alertDialogBuilder.setNegativeButton(
+                android.R.string.cancel,
+                DialogInterface.OnClickListener { dialog, which -> finish() }
+        )
+        alertDialogBuilder.show()
     }
 
 
